@@ -10,8 +10,8 @@ RUN apt-get update && \
 WORKDIR /tmp
 RUN wget https://it.flightaware.com/adsb/piaware/files/packages/pool/piaware/p/piaware-support/piaware-repository_3.8.0_all.deb && \
     dpkg -i piaware-repository_3.8.0_all.deb && apt-get update && apt-get -y install piaware dump1090-fa
+RUN mkdir /run/dump1090-fa && touch /run/dump1090-fa/aircraft.json
 COPY config.js /usr/share/dump1090-fa/html/
-#COPY upintheair.json /usr/share/dump1090-fa/html/
 COPY piaware.conf /etc/
 
 # FR24FEED
