@@ -58,7 +58,7 @@ fatoldsun/fr24feed-piaware
 ```
 *Note : remove `-v /path/to/your/upintheair.json:/usr/lib/fr24/public_html/upintheair.json` from the command line if you don't want to use this feature.*
 # Build it yourself
-Run : `docker build -f Dockerfile`
+Run : `docker build -f Dockerfile .`
 
 # Usage
 Go to http://dockerhost:8080 to view a map of reveived data.
