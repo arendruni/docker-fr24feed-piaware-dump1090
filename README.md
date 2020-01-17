@@ -1,5 +1,5 @@
 ![](https://images.microbadger.com/badges/image/fatoldsun/fr24feed-piaware.svg)
-![](https://images.microbadger.com/badges/version/fatoldsun/fr24feed-piaware.svg)
+[![Build Status](https://travis-ci.org/arendruni/docker-fr24feed-piaware-dump1090.svg?branch=master)](https://travis-ci.org/arendruni/docker-fr24feed-piaware-dump1090)
 
 # Fr24feed and FlightAware with dump1090 as a Docker image
 Docker image of Fr24feed, FlightAware and dump1090.
