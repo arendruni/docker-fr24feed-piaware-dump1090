@@ -1,9 +1,9 @@
-sudo: required #is required to use docker service in travis
+sudo: required
 
+arch:
+  - arm64
 language: bash
-
 services:
   - docker
-
 script:
   - docker build -f Dockerfile .
