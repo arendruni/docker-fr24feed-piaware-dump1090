@@ -1,6 +1,6 @@
 FROM arm32v7/debian:buster
 
-ENV PIAWARE_VERSION=3.8.0
+ENV PIAWARE_VERSION=4.0
 ENV FR24FEED_VERSION=1.0.26-5
 
 RUN apt-get update && \
