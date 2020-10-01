@@ -1,5 +1,7 @@
 IMAGE := fatoldsun/fr24feed-piaware
-VERSION := $(shell grep -m 1 PIAWARE_VERSION Dockerfile | awk '{print $2}' | cut -d '=' -f 2)
+PIAWARE_VERSION := $(shell grep -m 1 PIAWARE_VERSION Dockerfile | awk '{print $2}' | cut -d '=' -f 2)
+FR24FEED_VERSION := $(shell grep -m 1 FR24FEED_VERSION Dockerfile | awk '{print $2}' | cut -d '=' -f 2)
+VERSION := ${PIAWARE_VERSION}_${FR24FEED_VERSION}
 
 test:
 	true
