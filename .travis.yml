@@ -1,9 +1,17 @@
-sudo: required
-
 arch:
-  - arm64
+    - arm64
+
 language: bash
+
 services:
-  - docker
+    - docker
+
 script:
-  - docker build -f Dockerfile .
+    - 'make test'
+    - 'make image'
+
+deploy:
+    provider: script
+    script: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD && make push
+    on:
+        branch: master
